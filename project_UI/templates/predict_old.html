@@ -1,0 +1,95 @@
+{% extends "template.html" %}
+    {% block code_block %}
+        <h1>Know number of current openings for you </h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="">Enter Location</label>
+                <select name="location" class="form-control">
+                    <option value="0">Pune</option>
+                    <option value="1">Mumbai</option>
+                    <option value="2">Pune</option>
+                    <option value="3">Mumbai</option>
+                    <option value="4">Pune</option>
+                    <option value="5">Mumbai</option>
+                </select>
+            </div>
+            </br>
+            <div class="form-group">
+             <label for="">Enter your Industry</label>
+                <select name="industry"  class="form-control">
+                    <option value="0">IT Software/service</option>
+                    <option value="1">Sales</option>
+                    <option value="2">Pune</option>
+                    <option value="3">Mumbai</option>
+                    <option value="4">Pune</option>
+                    <option value="5">Mumbai</option>
+                    </select>
+            </div>
+            </br>
+            <div class="form-group">
+<!--                <div class="container">-->
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#option-droup-demo').multiselect();
+                    });
+                </script>
+                <label for="">Enter Qualification</label>
+                <select id="option-droup-demo" multiple="multiple">
+                <optgroup label="UG">
+                    <option value="B.TECH">B.TECH</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="Diploma" selected="selected">Diploma</option>
+                    <option value="B.Com" selected="selected">CSS</option>
+                    <option value="BCA">Angular</option>
+
+            </optgroup>
+
+            <optgroup label="Post Graduate">
+                <option value="M.Tech">Java</option>
+                <option value="M.Sc">C#</option>
+                <option value="M.Com">Python</option>
+                <option value="MCA">Angular</option>
+            </optgroup>
+            <optgroup label="Doctorate">
+                <option value="Any">MySQL</option>
+
+            </optgroup>
+
+            </select>
+            </div>
+            </br>
+            <div class="form-group">
+                <label for="">Enter Experience</label>
+                <input type="number" name="minExp" class="form-control">
+            </div>
+            </br>
+<!--            <div class="form-group">-->
+<!--                <label for="">Qualification</label>-->
+<!--                <select name="qualification" class="form-control">-->
+<!--                    <option value="0">UG</option>-->
+<!--                    <option value="1">PG</option>-->
+<!--                    <option value="2">Doctorate</option>-->
+<!--                </select>-->
+<!--            </div>-->
+            </br>
+            <div class="form-group">
+                <label for="">skills</label>
+                <select multiple="multiple" id="myMulti">
+                    <option>CSS</option>
+                    <option>SCRIPT</option>
+                    <option>COM</option>
+                    <option>jQuery</option>
+                    <option>HTML5</option>
+                </select>
+                <h5>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</h5>
+            </div>
+            <hr>
+
+            <div class="form-group">
+                <input type="submit" value="Predict" class="btn btn-success">
+                <input type="button" value="Reset" class="btn btn-danger"
+            </div>
+
+        </form>
+
+    {% endblock %}

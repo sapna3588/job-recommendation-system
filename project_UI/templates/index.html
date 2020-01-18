@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+{% extends "template.html" %}
+
+    {% block code_block %}
+<h1 id="headingofpage">Home Page</h1>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Portal Analysis</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!--/*changes image*/-->
+<script>
+function openPage(pageName,elmnt) {
+
+    $("#headingofpage").html(pageName);
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    if(pageName == "Analysis")
+        $("#loadAnalysis").load("./analysis.html");
+    if(pageName == "Predict")
+        $("#loadPredict").load("./predict.html");
+    if(pageName == "Recommend")
+        $("#loadRecommend").load("./recommend.html");
+
+
+}
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click();
+</script>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #20B2AA;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+.home-bg{
+  min-height: 900px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+<!--changes image-->
+/*.container {
+    width: 100% !important;
+    margin: 0px 0px 0px 0px !important;
+
+}*/
+
+</style>
+</head>
+<body>
+<button class="tablink" onclick="openPage('Home', this)" id="defaultOpen"><b>Home</b></button>
+<button class="tablink" onclick="openPage('Analysis', this)"><b>Analysis</b></button>
+<button class="tablink" onclick="openPage('Predict', this)"><b>Predict</b></button>
+<button class="tablink" onclick="openPage('Recommend', this)"><b>Recommend</b></button>
+
+<div id="Home" class="tabcontent">
+    <div class="container">
+        <br>
+  <h1 style="color:yellow;font-family:verdana;">Seeking Job...</h1>
+  <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
+      According to Career Builder's latest report, 63% of businesses within the U.S. planned to hire full-time employees within the last year. However, many of these companies have also noted that it is a struggle to fill these positions due to low unemployment rates.
+
+Your approach to hiring needs to be top-notch in order to capture the attention of truly qualified talent. If your recruiting strategies are not first rate, your hiring strategy is doomed from the start. Any kinks in the application and interview experience could send your best candidates running, leaving your hiring managers with only a handful of less-than-stellar options.
+</p><p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
+Thankfully, technology is providing the answer here for many companies. AI is already revolutionizing business through digital marketing and data analysis, but it is also making it easier for organizations to bring on great talent.
+
+There are plenty of ways that modern hiring programs can support recruiters by saving them time and effort in connecting with great applicants. But it is not just hiring managers that stand to benefit from recruiting technology – these programs are also helping to create a better candidate experience. In turn, this leads to better hiring processes on both sides of the table.
+
+Curious as to how this all works? Read on!</p>
+
+    <h1 style="color:yellow;font-family:verdana;">Connecting Candidates to the Right Recruiters!!!</h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">There are plenty of talented job candidates who may not be applying to your company simply because they are not seeking it out. Further, there may be some great talent who aren't actually looking at the moment, but would be interested if a great opportunity came their way. In fact, 70% of the workforce is not actively searching for jobs, but would be willing to accept an offer if the job was a good fit.
+    </p><p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">
+Recruiters need to be able to find these candidates and connect with them to discuss the position further. Fetcher.ai is designed to source these hidden talents by using AI and NLP (natural language processing) to scan online resumes and profiles to send valuable leads to recruiters:</p>
+    <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">This tool also creates rich candidate profiles with lots of important information gathered from multiple resources (such as their LinkedIn profile and Indeed resume), so hiring managers can get a feel for the candidate’s skill set before reaching out</p>
+    <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">And on the candidate side, job seekers are wise to optimize their resumes for various positions. Candidates will need to create various resumes that highlight specific skills depending on the criteria that recruiters would be looking for.</p>
+    </div>
+</div>
+
+<div id="Analysis" class="tabcontent">
+    <div id="loadAnalysis"></div>
+</div>
+
+<div id="Predict" class="tabcontent">
+  <div id="loadPredict"></div>
+</div>
+
+<div id="Recommend" class="tabcontent">
+  <div id="loadRecommend"></div>
+</div>
+</body>
+</html>
+
+    {% endblock %}

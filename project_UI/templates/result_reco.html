@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+
+    {% block code_block %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="color:black;font-family:verdana;">Recommended Companies:</h1>
+        <div class="container">
+        <h1>Number of openings acording to your profile is: </h1>
+           <table border="1"><h2><b><tr><td>Company</td><td>Job title</td><td>experience</td></tr></b></h2>
+            {% for value in data %}
+
+               <h3><tr><td>{{ value[0] }}</td>
+               <td>{{ value[1] }}</td>
+               <td>{{ value[2] }}</td></tr></h3>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+
+        </div>
+    {% endblock %}

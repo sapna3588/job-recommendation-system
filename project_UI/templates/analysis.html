@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+    {% block code_block %}
+<script>
+      function loadResult(param){
+      postUrl = "/" + param
+       $.ajax({
+      url: postUrl,
+      type: "post",
+      data: {jsdata: param},
+      success: function(response) {
+        $("#analysisResult").html(response);
+      },
+      error: function(xhr) {
+        $("#analysisResult").html("<div>Error occured</div>");
+      }
+    });
+      }
+
+</script>
+<br>
+<div class="container">
+
+        <h1>JOB ANALYSIS</h1>
+        <h4>This application will find the TOP 10 TRENDING jobs based on:</h4>
+        </br>
+        </br>
+        <label for="">1. INDUSTRY</label>
+
+        <input type="submit" class="btn btn-success" value="Trending Industry" onclick="loadResult('industry')">
+        </br>
+        </br>
+        <label for="">2. COMPANY</label>
+        <input type="submit" class="btn btn-success" value="Trending Company" onclick="loadResult('company')">
+        </br>
+        </br>
+        <label for="">3. AREA/FIELD</label>
+        <input type="submit" class="btn btn-success" value="Trending Field " onclick="loadResult('jobtitle')">
+
+        <div id="analysisResult" height="200" width="70%"></div>
+        </br>
+        </br>
+        <div class="form-group">
+           <button value="Submit"><a href="https://public.tableau.com/profile/vanee.chandrakar#!/vizhome/Nuakri_project/COMPANYPROVIDINGMAXIMUMNUMBEROFJOB">Analyse All</a></button>
+        </div>
+</div>
+    {% endblock %}
+

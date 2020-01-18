@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+<!--changes images-->
+body, html {
+  height: 100%;
+
+<!--  font-family: Arial, Helvetica, sans-serif;-->
+  font-family:verdana;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url({{ url_for('static', filename='office-supplies.jpg') }}) !important;
+
+  min-height: 900px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  filter: alpha(opacity=10);
+}
+
+/* Add styles to the form container */
+.container {
+  /*position: absolute;
+  right: 0;*/
+  /*margin-top: 100px;*/
+  /* max-width: 300px;
+  width: 500px;*/
+  width : 80%
+  padding: 16px;
+  background-color: DimGrey;
+}
+
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #20B2AA;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body class="bg-img">
+
+<!--    <div class="container">-->
+
+        {% block code_block %}
+        {% endblock %}
+
+<!--    </div>-->
+</body>
+</html>
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->

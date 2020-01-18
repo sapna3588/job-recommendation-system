@@ -1,0 +1,615 @@
+{% extends "template.html" %}
+    {% block code_block %}
+
+<body>
+<div class="container">
+            <h1>Know number of current openings for you </h1>
+            <form action="/recommend" method="POST">
+                <div class="form-group">
+                    <label for="">Enter Location</label>
+                    <select name="location" class="form-control">
+                        <option> Chennai</option>
+                        <option > Mumbai</option>
+                        <option > Kolkata</option>
+                        <option > Coimbatore</option>
+                        <option > Tamilnadu</option>
+                        <option > NCR</option>
+                        <option > Kochi</option>
+                        <option > Greater Noida</option>
+                        <option > Gurgaon</option>
+                        <option > Hyderabad</option>
+                        <option > Kozhikode</option>
+                        <option > Lucknow</option>
+                        <option > Delhi</option>
+                        <option > Tirupati</option>
+                        <option > Visakhapatnam</option>
+                        <option > Ahmedabad</option>
+                        <option > Pune</option>
+                        <option > Canada</option>
+                        <option > Australia</option>
+                        <option > Indore</option>
+                        <option > Chandigarh</option>
+                        <option > Jaipur</option>
+                        <option > Wayanad</option>
+                        <option > Warangal</option>
+                        <option > Vijayawada</option>
+                        <option > Vellore</option>
+                        <option > Tuticorin</option>
+                        <option > Tumkur</option>
+                        <option > Trivandrum</option>
+                        <option > PUNE Mumbai</option>
+                        <option > Chennai Kolkata</option>
+                        <option > Bangalore Hyderabad</option>
+                        <option > Mumbai Suburbs</option>
+                        <option > Chennai Bangalore</option>
+                        <option > Hyderabad Kolkata</option>
+                        <option > Noida</option>
+                        <option > Surat</option>
+                        <option > Bhubaneshwar</option>
+                        <option > Dehradun</option>
+                        <option > Hyderabad Bangalore</option>
+                        <option > Chennai Coimbatore</option>
+                        <option > Vellore Salem</option>
+                        <option > Cuttack</option>
+                        <option > Dadra and Nagar Haveli</option>
+                        <option > Chennai Mumbai</option>
+                        <option > Bangalore PUNE</option>
+                        <option > Mangalore</option>
+                        <option > Panjim</option>
+                        <option > Bellary</option>
+                        <option > Mauritius</option>
+                        <option > Tarapur</option>
+                        <option > Mohali</option>
+                        <option > Phagwara</option>
+                        <option > Vasai</option>
+                        <option > Thane</option>
+                        <option > Navi Mumbai</option>
+                        <option > Agra</option>
+                        <option > Belgaum</option>
+                        <option > Hubli</option>
+                        <option > Davangere</option>
+                        <option > Dharwad</option>
+                        <option > Gulbarga</option>
+                        <option > Hospet</option>
+                        <option > Kolar</option>
+                        <option > Tirunelveli</option>
+                        <option > Thanjavur</option>
+                        <option > Pondicherry</option>
+                        <option > Ooty</option>
+                        <option > Nagercoil</option>
+                        <option > Japan</option>
+                        <option > Mysore</option>
+                        <option > Trichy</option>
+                        <option > Guntur</option>
+                        <option > Houston</option>
+                        <option > Salem Tiruppur</option>
+                        <option > Coimbatore Mumbai</option>
+                        <option > Malaysia</option>
+                        <option > Faridabad</option>
+                        <option > Mumbai PUNE</option>
+                        <option > Ghaziabad</option>
+                        <option > Hosur</option>
+                        <option > Bangalore Kolkata</option>
+                        <option > Chennai Hyderabad</option>
+                        <option > Kolkata Mumbai</option>
+                        <option > PUNE Delhi</option>
+                        <option > Ludhiana</option>
+                        <option > Bidar</option>
+                        <option > Shimoga</option>
+                        <option > Nagpur</option>
+                        <option > Dubai/ UAE</option>
+                        <option > Kolkata PUNE</option>
+                        <option > Palakkad</option>
+                        <option > Bhopal</option>
+                        <option > Jajpur Odisha</option>
+                        <option > Patna</option>
+                        <option > Aurangabad</option>
+                        <option > Vadodara</option>
+                        <option > Kuwait</option>
+                        <option > Jodhpur</option>
+                        <option > Orissa</option>
+                        <option > Singapore</option>
+                        <option > Karnataka</option>
+                        <option > Rajkot</option>
+                        <option > Meerut</option>
+                        <option > Hyderabad / Secunderabad</option>
+                        <option > Kota</option>
+                        <option > Uttaranchal Other</option>
+                        <option > haryana</option>
+                        <option > Haridwar</option>
+                        <option > Hyderabad/Secunderabad</option>
+                        <option > Guwahati</option>
+                        <option > Raipur</option>
+                        <option > Anantapur</option>
+                        <option > Guntakal</option>
+                        <option > Kurnool</option>
+                        <option > Nizamabad</option>
+                        <option > Panjim/Panaji</option>
+                        <option > Ernakulam / Kochi/ Cochin</option>
+                        <option > Agartala</option>
+                        <option > Karnataka Other</option>
+                        <option > Akola</option>
+                        <option > Solapur</option>
+                        <option > Kanpur</option>
+                        <option > Uttarpradesh Other</option>
+                        <option > Baddi</option>
+                        <option > Rajahmundry</option>
+                        <option > Kakinada</option>
+                        <option > Andhrapradesh Other</option>
+                        <option > Arunachalpradesh Oth</option>
+                        <option > Salem</option>
+                        <option > Tambaram Perambur</option>
+                        <option > Velachery Madipakkam</option>
+                        <option > Guindy Koyembedu</option>
+                        <option > Kozhikode / Calicut</option>
+                        <option > Kottayam</option>
+                        <option > Palakkad / Palghat</option>
+                        <option > Malappuram</option>
+                        <option > Goa Other</option>
+                        <option > Rohtak</option>
+                        <option > Hisar</option>
+                        <option > Dalhousie</option>
+                        <option > Dharmasala</option>
+                        <option > Kullu/Manali</option>
+                        <option > Haryana Other</option>
+                        <option > Nasik</option>
+                        <option > Jalandhar</option>
+                        <option > Saudi Arabia</option>
+                        <option > Cochin/ Kochi/ Ernakulam</option>
+                        <option > Cuddalore</option>
+                        <option > Other City(s) in Andhra Pradesh</option>
+                        <option > Latur</option>
+                        <option > Other City(s) in Maharasht</option>
+                        <option > andra</option>
+                        <option > Silchar</option>
+                        <option > Siliguri</option>
+                        <option > Valsad</option>
+                        <option > Vapi</option>
+                        <option > Dahej</option>
+                        <option > Gandhidham</option>
+                        <option > Mehsana</option>
+                        <option > Ambala</option>
+                        <option > Bareilly</option>
+                        <option > Varanasi</option>
+                        <option > Ranchi</option>
+                        <option > Karnal</option>
+                        <option > Nellore</option>
+                        <option > Chandrapur</option>
+                        <option > Amravati</option>
+                        <option > Buldhana</option>
+                        <option > Dhule</option>
+                        <option > Rourkela</option>
+                        <option > Jammu</option>
+                        <option > Amritsar</option>
+                        <option > Rudrapur</option>
+                        <option > Madurai</option>
+                        <option > hyderabad</option>
+                        <option > chennai</option>
+                        <option > Bharuch</option>
+                        <option > Other City(s) in Gujarat</option>
+                        <option > nan</option>
+                        <option > primary_city
+                        <option >
+                        <option > Bikaner</option>
+                        <option > Cuddapah</option>
+                        <option > Other City(s) in Tamil Nadu</option>
+                        <option > Jamnagar</option>
+                        <option > Vasco Da Gama</option>
+                        <option > UP</option>
+                        <option > Aligarh</option>
+                        <option > Karur</option>
+                        <option > Ganganagar</option>
+                        <option > Dibrugarh</option>
+                        <option > Bhiwadi</option>
+                        <option > Punjab</option>
+                        <option > Dadra & Nagar Haveli / Silvassa</option>
+                        <option > Kerala</option>
+                        <option > United States (U.S)</option>
+                        <option > Maharashtra</option>
+                        <option > Angul</option>
+                        <option > Thrissur / Trichur</option>
+                        <option > Sambalpur</option>
+                        <option > Mandi</option>
+                        <option > Kollam / Quilon</option>
+                        <option > Rupnagar</option>
+                        <option > Manesar</option>
+                        <option > Bhiwani</option>
+                        <option > Andhra Pradesh</option>
+                        <option > Ankleshwar</option>
+                        <option > Erode</option>
+                        <option > India</option>
+                        <option > Jamshedpur</option>
+                        <option > Chennai Vizag</option>
+                        <option > Nellore Kurnool</option>
+                        <option > Allahabad</option>
+                        <option > Chennai Rajahmundry</option>
+                        <option > Kadapa Kakinada</option>
+                        <option > Tirupathi Anantapur</option>
+                        <option > Bhuj</option>
+                        <option > Kanchipuram</option>
+                        <option > Cochin</option>
+                        <option > Kalpakkam</option>
+                        <option > Chennai Trichy</option>
+                        <option > Erode Cuddalore</option>
+                        <option > Villupuram Pondy</option>
+                        <option > bangalore</option>
+                        <option > India - Bangalore</option>
+                        <option > karnataka</option>
+                        <option > Davanagere</option>
+                        <option > Mysoru / Mysore</option>
+                        <option > India-Karnataka-Bangalore</option>
+                        <option > Bhillai</option>
+                        <option > Other City(s) in Karnataka</option>
+                        <option > Gandhinagar</option>
+                        <option > IN-IN</option>
+                        <option > India-Bangalore</option>
+                        <option > pune</option>
+                        <option > mumbai</option>
+                        <option > ahmedabad</option>
+                        <option > jaipur</option>
+                        <option > Other City(s) in Uttar Pradesh</option>
+                        <option > Germany</option>
+                        <option > Location: White Field</option>
+                        <option > Other City(s) in Kerala</option>
+                        <option > indore</option>
+                        <option > Varanasi / Banaras</option>
+                        <option > Other City(s) in Chhattisgarh</option>
+                        <option > Other City(s) in Har</option>
+                        <option > Durg</option>
+                        <option > IN - KA - Bangalore</option>
+                        <option > Thiruvananthapuram</option>
+                        <option > Udaipur</option>
+                        <option > Adilabad</option>
+                        <option > Rajasthan</option>
+                        <option > Haryana</option>
+                        <option > MP</option>
+                        <option > Bihar</option>
+                        <option > Ajmer</option>
+                        <option > Overseas</option>
+                        <option > Mathura</option>
+                        <option > Sonepat</option>
+                        <option > Kolhapur</option>
+                        <option > Srinagar</option>
+                        <option > Asansol</option>
+                        <option > Haldia</option>
+                        <option > Patiala</option>
+                        <option > Yamunanagar</option>
+                        <option > Gujarat</option>
+                        <option > Bawal</option>
+                        <option > Neemrana</option>
+                        <option > Ahmednagar</option>
+                        <option > delhi</option>
+                        <option > Gwalior</option>
+                        <option > Dharuhera</option>
+                        <option > Kharagpur</option>
+                        <option > Dhanbad</option>
+                        <option > Anywhere India</option>
+                        <option > United Kingdom (U.K)</option>
+                        <option > Hindupur</option>
+                        <option > Gauribidanur</option>
+                        <option > chittoor</option>
+                        <option > Bhilai/Bhillai</option>
+                        <option > Udupi</option>
+                        <option > Alappuzha / Alleppey</option>
+                        <option > Hong Kong</option>
+                        <option > London</option>
+                        <option > Chicago</option>
+                        <option > Schenectady</option>
+                        <option > Amstc</option>
+                        <option > Cincinnati</option>
+                        <option > Atlanta</option>
+                        <option > Baden</option>
+                        <option > Daman & Diu</option>
+                        <option > Bokaro</option>
+                        <option > Jammuandkashmir Othe</option>
+                        <option > Jharkhand Other</option>
+                        <option > maharashtra</option>
+                        <option > Alaska</option>
+                        <option > THANE</option>
+                        <option > Baroda</option>
+                        <option > NAVI MUMBAI</option>
+                        <option > PANVEL</option>
+                        <option > Raigarh</option>
+                        <option > Puri</option>
+                        <option > Madhyapradesh Other</option>
+                        <option > Rajasthan Other</option>
+                        <option > banda</option>
+                        <option > Wadala</option>
+                        <option > BANDRA</option>
+                        <option > ANDHERI</option>
+                        <option > VASHI</option>
+                        <option > GOREGOAN</option>
+                        <option > BORIVILLI</option>
+                        <option > DOMBIVLLI</option>
+                        <option > MULUND</option>
+                        <option > GHATKOPAR</option>
+                        <option > COLABA</option>
+                        <option > NARIMAN POINT.</option>
+                        <option > IND-Maharashtra-Thane</option>
+                        <option > Faizabad</option>
+                        <option > Gorakhpur</option>
+                        <option > Anand</option>
+                        <option > Kurukshetra</option>
+                        <option > Panipat</option>
+                        <option > Lakshadweep</option>
+                        <option > Tripura Other</option>
+                        <option > Bangladesh</option>
+                        <option > Indonesia</option>
+                        <option > Bhavnagar</option>
+                        <option > Gir</option>
+                        <option > Kandla</option>
+                        <option > Shimla</option>
+                        <option > Mathura Mountabu</option>
+                        <option > Mussoorie Mysore</option>
+                        <option > Manali Nagpur</option>
+                        <option > Nainital Noida</option>
+                        <option > OOTY Orchha</option>
+                        <option > Panaji Patna</option>
+                        <option > Saharanpur</option>
+                        <option > Kashipur</option>
+                        <option > Haldwani</option>
+                        <option > Courier / Transportation / Freight / Warehousing</option>
+                        <option > Moradabad</option>
+                        <option > Bijnor</option>
+                        <option > Roorkee</option>
+                        <option > seoni</option>
+                        <option > Rewari</option>
+                        <option > Quilon</option>
+                        <option > Qatar</option>
+                        <option > Near Bangalore</option>
+                        <option > Madhepura</option>
+                        <option > Hyderabad Mumbai</option>
+                        <option > PUNE Tirunelveli</option>
+                        <option > Mumbai Pune</option>
+                        <option > Hyderabad PUNE</option>
+                        <option > Kolkata Bangalore</option>
+                        <option > PUNE Bangalore</option>
+                        <option > Kolkata Hyderabad</option>
+                        <option > Chennai Vijayawada</option>
+                        <option > Vizag Hyderabad</option>
+                        <option > Assam</option>
+                        <option > Borivali</option>
+                        <option > kolkata</option>
+                        <option > Ujjain</option>
+                        <option > Dimapur</option>
+                        <option > palghar</option>
+                        <option > Goregaon (E)</option>
+                        <option > JOB LOCATION: MUMBAI (INDIA)</option>
+                        <option > Doda</option>
+                        <option > IN-MH-Mumbai-Prism Towers / 31002</option>
+                        <option > bolpur</option>
+                        <option > airoli</option>
+                        <option > Jalgaon</option>
+                        <option > noida</option>
+                        <option > chandigarh</option>
+                        <option > mumbai/pune</option>
+                        <option > Mumbai Corporate Office</option>
+                        <option > IN-MH-Greater Mumbai-Mumbai</option>
+                        <option > IN-MH-Greater Mumbai-Mumbai-Voltas C</option>
+                        <option > Moga</option>
+                        <option > Santacruz</option>
+                        <option > Vikhroli</option>
+                        <option > thane</option>
+                        <option > Bangalore/Mumbai</option>
+                        <option > Other City(s) in Maharashtra</option>
+                        <option > India - Mumbai</option>
+                        <option > City</option>
+                        <option > Recruitment</option>
+                        <option > Selection</option>
+                        <option > Matriculation and Alumni Impact - Pune/Mumbai</option>
+                        <option > Lonavala</option>
+                        <option > India-Mumbai</option>
+                        <option > Indonesia-Jakarta</option>
+                        <option > hosur</option>
+                        <option > nagpur</option>
+                        <option > National Team Mumbai</option>
+                        <option > National Team - Mumbai</option>
+                        <option > Asia-India-Greater Mumbai</option>
+                        <option > Itanagar</option>
+                        <option > INDIA-NOIDA-NOIDA</option>
+                        <option > Other City(s) in Punjab</option>
+                        <option > punjab</option>
+                        <option > IN-HR-Gurgaon</option>
+                        <option > New Delhi</option>
+                        <option > Muzaffarpur</option>
+                        <option > Location: Gurgaon</option>
+                        <option > gurgaon</option>
+                        <option > Other City(s) in Jammu & Kashmir</option>
+                        <option > khurja</option>
+                        <option > Pune (Salunke Vihar)</option>
+                        <option > Pune (Swarga</option>
+                        <option > IN - DL - New Delhi</option>
+                        <option > Other City(s) in Bihar</option>
+                        <option > gujarat</option>
+                        <option > 18</option>
+                        <option > lucknow</option>
+                        <option > morena</option>
+                        <option > #NAME?</option>
+                        <option > Other City(s) in Goa</option>
+                        <option > INDIA - Noida</option>
+                        <option > dwarka</option>
+                        <option > IN-DL-New Delhi</option>
+                        <option > HR</option>
+                        <option > IND</option>
+                        <option > India-Noida</option>
+                        <option > India-NCR</option>
+                        <option > Telangana</option>
+                        <option > Thrissur</option>
+                        <option > Khammam</option>
+                        <option > Banswara</option>
+                        <option > Jaisalmer</option>
+                        <option > Sri Lanka</option>
+                        <option > Goa</option>
+                        <option > Karimnagar</option>
+                        <option > Jhansi</option>
+                        <option > south india</option>
+                        <option > Bangalore</option>
+                    </select>
+                </div>
+                </br>
+                <div class="form-group">
+                   <label for="">Industry</label>
+                   <select name="industry" class="form-control">
+                       <option >Advertising / PR / MR / Event Management</option>
+                        <option >Agriculture / Dairy</option>
+                        <option >Animation / Gaming</option>
+                        <option >Architecture / Interior Design</option>
+                        <option >Automobile / Auto Anciliary / Auto Components</option>
+                        <option >Aviation / Aerospace Firms</option>
+                        <option >BPO / Call Centre / ITES</option>
+                        <option >Banking / Financial Services / Broking</option>
+                        <option >Brewery / Distillery</option>
+                        <option >Broadcasting</option>
+                        <option >Ceramics / Sanitary ware</option>
+                        <option >Chemicals / PetroChemical / Plastic / Rubber</option>
+                        <option >Construction / Engineering / Cement / Metals</option>
+                        <option >Consumer Electronics / Appliances / Durables</option>
+                        <option >Courier / Transportation / Freight / Warehousing</option>
+                        <option >Education / Teaching / Training</option>
+                        <option >Electricals / Switchgears</option>
+                        <option >Export / Import</option>
+                        <option >FMCG / Foods / Beverage</option>
+                        <option >Facility Management</option>
+                        <option >Fertilizers / Pesticides</option>
+                        <option >Food Processing</option>
+                        <option >Fresher / Trainee / Entry Level</option>
+                        <option >Gems / Jewellery</option>
+                        <option >Glass / Glassware</option>
+                        <option >Government / Defence</option>
+                        <option >Heat Ventilation / Air Conditioning</option>
+                        <option >IT-Hardware & Networking</option>
+                        <option >IT-Software / Software Services</option>
+                        <option >Industrial Products / Heavy Machinery</option>
+                        <option >Insurance</option>
+                        <option >Internet / Ecommerce</option>
+                        <option >Iron and Steel</option>
+                        <option >KPO / Research / Analytics</option>
+                        <option >Leather</option>
+                        <option >Legal</option>
+                        <option >Media / Entertainment / Internet</option>
+                        <option >Medical / Healthcare / Hospitals</option>
+                        <option >Medical Devices / Equipments</option>
+                        <option >NGO / Social Services / Regulators / Industry Assoc
+                        <option >Office Equipment / Automation</option>
+                        <option >Oil and Gas / Energy / Power / Infrastructure</option>
+                        <option >Other</option>
+                        <option >Pharma / Biotech / Clinical Research</option>
+                        <option >Printing / Packaging</option>
+                        <option >Publishing</option>
+                        <option >Pulp and Paper</option>
+                        <option >Real Estate / Property</option>
+                        <option >Recruitment / Staffing</option>
+                        <option >Retail / Wholesale</option>
+                        <option >Security / Law Enforcement</option>
+                        <option >Semiconductors / Electronics</option>
+                        <option >Shipping / Marine</option>
+                        <option >Strategy / Management Consulting Firms</option>
+                        <option >Telecom/ISP</option>
+                        <option >Telecom/ISP</option>
+                        <option >Textiles / Garments / Accessories</option>
+                        <option >Travel / Hotels / Restaurants / Airlines / Railways</option>
+                        <option >Water Treatment / Waste Management</option>
+                        <option >Wellness / Fitness / Sports</option>
+                        <option >Wellness / Fitness / Sports / Beauty</option>
+
+                   </select>
+                </div>
+                </br>
+                <div class="form-group">
+                    <label for="">Enter your Experience</label>
+                    <input type="number" name="minExp" class="form-control">
+                </div>
+                </br>
+                <fieldset>
+                    <legend>What is Your Qualification?</legend>
+                    <input type="checkbox" name="a" value="ug">Graduate<br>
+                    <input type="checkbox" name="a" value="pg">PostGraduate<br>
+                    <input type="checkbox" name="a" value="doc">Doctorate<br>
+                    <br>
+                </fieldset>
+                <script type="text/javascript">
+                    function ValidateQualSelection()
+                    {
+                        var checkboxes = document.getElementsByName("a");
+                        var numberOfCheckedItems = 0;
+                        for(var i = 0; i < checkboxes.length; i++)
+                        {
+                            if(checkboxes[i].checked)
+                                numberOfCheckedItems++;
+                        }
+                        if(numberOfCheckedItems == 0)
+                        {
+                            alert("You have to select atlest 1 option !");
+                            return false;
+                        }
+                    }
+            </script>
+                </br>
+                <div class="form-group">
+                    <label for="">skills</label>
+                    <select name="skills" class="form-control">
+                       <option >Accounts</option>
+                       <option >Analytics & Business Intelligence</option>
+                       <option >Architecture</option>
+                       <option >Beauty/Fitness/Spa Services</option>
+                       <option >Defence Forces</option>
+                       <option >Design</option>
+                       <option >Engineering Design</option>
+                       <option >Executive Assistant</option>
+                       <option >Export</option>
+                       <option >Fashion Designing</option>
+                       <option >Financial Services</option>
+                       <option >HR</option>
+                       <option >Hotels</option>
+                       <option >IT Hardware</option>
+                       <option >IT Software - Application Programming</option>
+                       <option >IT Software - Client/Server Programming</option>
+                       <option >IT Software - DBA</option>
+                       <option >IT Software - ERP</option>
+                       <option >IT Software - Embedded</option>
+                       <option >IT Software - Mainframe</option>
+                       <option >IT Software - Middleware</option>
+                       <option >IT Software - Mobile</option>
+                       <option >IT Software - Network Administration</option>
+                       <option >IT Software - Other</option>
+                       <option >IT Software - QA & Testing</option>
+                       <option >IT Software - System Programming</option>
+                       <option >IT Software - Systems</option>
+                       <option >IT Software - Telecom Software</option>
+                       <option >IT Software - eCommerce</option>
+                       <option >ITES</option>
+                       <option >Journalism</option>
+                       <option >Legal</option>
+                       <option >Marketing</option>
+                       <option >Medical</option>
+                       <option >Packaging</option>
+                       <option >Production</option>
+                       <option >Sales</option>
+                       <option >Shipping</option>
+                       <option >Site Engineering</option>
+                       <option >Strategy</option>
+                       <option >Supply Chain</option>
+                       <option >TV</option>
+                       <option >Teaching</option>
+                       <option >Top Management</option>
+                       <option >Travel</option>
+
+                    </select>
+                </div>
+                <hr>
+
+                <div class="form-group">
+                    <input type="submit" value="Jobs" class="btn btn-success" onclick="return ValidateQualSelection();">
+                    <input type="button" value="Reset" class="btn btn-danger">
+                </div>
+            </form>
+</div>
+</body>
+{% endblock %}
+
+
+
+
+
+
+
